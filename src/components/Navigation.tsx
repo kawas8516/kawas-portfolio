@@ -31,7 +31,7 @@ const Navigation = () => {
               About
             </Link>
             <Button asChild size="sm">
-              <a href="mailto:your.email@example.com">Contact</a>
+              <a href="mailto:kaustubhamandhane24@gmail.com">Contact</a>
             </Button>
           </div>
         </div>

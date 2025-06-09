@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -17,9 +16,6 @@ const Index = () => {
             </Link>
             <Link to="/about" className="text-foreground text-lg font-medium hover:text-foreground/80 transition-colors">
               About
-            </Link>
-            <Link to="/blog" className="text-foreground text-lg font-medium hover:text-foreground/80 transition-colors">
-              Blog
             </Link>
           </div>
           
@@ -109,7 +105,7 @@ const Index = () => {
           className="bg-muted hover:bg-muted/80 text-foreground rounded-lg w-12 h-12"
           asChild
         >
-          <a href="mailto:your.email@example.com">
+          <a href="mailto:kaustubhamandhane24@gmail.com">
             <span className="text-lg">💬</span>
           </a>
         </Button>

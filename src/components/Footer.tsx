@@ -35,10 +35,10 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-muted-foreground" />
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:kaustubhamandhane24@gmail.com"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              your.email@example.com
+              kaustubhamandhane24@gmail.com
             </a>
           </div>
           
