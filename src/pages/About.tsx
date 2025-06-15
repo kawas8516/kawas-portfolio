@@ -2,12 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Download, Github, Linkedin, Mail } from "lucide-react";
+import { Calendar, MapPin, Download, ExternalLink, Github } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
-import Testimonials from "@/components/Testimonials";
-import WorkExperience from "@/components/WorkExperience";
 
 const About = () => {
   const education = [
@@ -37,165 +34,101 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="pt-20">
-        {/* Clean Hero Section */}
-        <section className="section-padding">
-          <div className="max-w-4xl mx-auto container-padding">
+      <div className="pt-24 pb-12">
+        <div className="max-w-4xl mx-auto px-6">
+          
+          {/* About Me Section */}
+          <section className="mb-20">
             <div className="text-center mb-12">
-              <h1 className="text-black mb-6">About Me</h1>
-              <div className="w-16 h-1 bg-black mx-auto mb-6"></div>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Passionate developer, curious learner, and tech enthusiast crafting digital experiences 
-                that make a difference.
-              </p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
+              <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
             </div>
             
-            <Card className="hover-lift border shadow-sm">
-              <div className="p-8">
-                <div className="flex flex-col lg:flex-row gap-8 items-center">
-                  <div className="w-48 h-48 bg-black rounded-lg flex-shrink-0 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-white">KA</span>
-                  </div>
+            <Card className="p-8 md:p-12">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="w-48 h-48 bg-gradient-to-br from-primary to-primary/60 rounded-full flex-shrink-0 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-primary-foreground">KA</span>
+                </div>
+                
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="text-2xl font-semibold mb-6">Welcome to my little corner of the web!</h2>
                   
-                  <div className="flex-1 text-center lg:text-left">
-                    <h2 className="text-black mb-6">Welcome to my little corner of the web!</h2>
-                    
-                    <div className="space-y-4 text-gray-600 leading-relaxed">
-                      <p>
-                        My passion for technology began in high school, where I crafted Ethernet cables with RJ-45 connectors. 
-                        Since then, my curiosity has grown with my height too! I love exploring cloud computing, networking, 
-                        AI, operating systems, IoT, and anything else that pushes the tech boundaries.
-                      </p>
-                      
-                      <p>
-                        I'm also a content creator at heart. I enjoy writing captions, emails, and all kinds of content 
-                        that help connect people and share ideas. Though I occasionally draw or play games like Valorant 
-                        and Minecraft, you can usually find me listening to Spotify or chatting on Discord.
-                      </p>
-                      
-                      <p>
-                        Outside the tech world, I'm all about meeting new people and exchanging ideas. If you're into 
-                        technology, software, or just want to talk about the latest trends, I'm all ears!
-                      </p>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-4 mt-8">
-                      <Button className="bg-black hover:bg-gray-800 text-white">
-                        <Download className="w-4 h-4 mr-2" />
-                        Download CV
-                      </Button>
-                      <div className="flex items-center gap-2">
-                        <a href="https://github.com/yourusername" className="p-2 rounded bg-gray-100 hover:bg-gray-200 transition-colors">
-                          <Github className="w-4 h-4" />
-                        </a>
-                        <a href="https://linkedin.com/in/yourusername" className="p-2 rounded bg-gray-100 hover:bg-gray-200 transition-colors">
-                          <Linkedin className="w-4 h-4" />
-                        </a>
-                        <a href="mailto:kaustubhamandhane24@gmail.com" className="p-2 rounded bg-gray-100 hover:bg-gray-200 transition-colors">
-                          <Mail className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                    My passion for technology began in high school, where I crafted Ethernet cables with RJ-45 connectors. Since then, my curiosity has grown with my height too! I love exploring cloud computing, networking, AI, operating systems, IoT, and anything else that pushes the tech boundaries.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                    I'm also a content creator at heart. I enjoy writing captions, emails, and all kinds of content that help connect people and share ideas. Though I occasionally draw or play games like Valorant and Minecraft, you can usually find me listening to Spotify or chatting on Discord.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+                    Outside the tech world, I'm all about meeting new people and exchanging ideas. If you're into technology, software, or just want to talk about the latest trends, I'm all ears. Drop me a line, and let's connect!
+                  </p>
+                  
+                  <Button size="lg" className="text-lg px-8 py-6">
+                    <Download className="w-5 h-5 mr-2" />
+                    Download CV
+                  </Button>
                 </div>
               </div>
             </Card>
-          </div>
-        </section>
+          </section>
 
-        {/* Education Section */}
-        <section className="section-padding bg-gray-50">
-          <div className="max-w-4xl mx-auto container-padding">
-            <div className="text-center mb-12">
-              <h2 className="text-black">Education</h2>
-              <p className="text-gray-600 text-lg">
-                Academic foundation building my technical expertise
-              </p>
-            </div>
+          {/* Education Section */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
             
             <div className="space-y-6">
               {education.map((edu, index) => (
-                <Card key={index} className="hover-lift border shadow-sm">
-                  <div className="p-6">
-                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                <Card key={index} className="p-6 hover:shadow-md transition-shadow">
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="text-black mb-2">{edu.degree}</h3>
-                        <p className="text-lg font-medium mb-2">{edu.institution}</p>
-                        <div className="flex flex-col sm:flex-row gap-4 text-gray-600 mb-4">
-                          <div className="flex items-center gap-2">
+                        <h3 className="text-xl font-semibold mb-2">{edu.degree}</h3>
+                        <p className="text-lg text-primary font-medium mb-2">{edu.institution}</p>
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                          <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
                             {edu.period}
                           </div>
-                          <div className="font-medium">{edu.cgpa}</div>
                         </div>
+                        <p className="text-muted-foreground font-medium mb-3">{edu.cgpa}</p>
                       </div>
                     </div>
-                    <div className="space-y-3 text-gray-600">
-                      <p>{edu.description}</p>
-                      <p>{edu.activities}</p>
-                    </div>
+                    <p className="text-muted-foreground mb-3">{edu.description}</p>
+                    <p className="text-muted-foreground">{edu.activities}</p>
                   </div>
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Work Experience */}
-        <WorkExperience />
-
-        {/* Projects Section */}
-        <section className="section-padding">
-          <div className="max-w-4xl mx-auto container-padding">
-            <div className="text-center mb-12">
-              <h2 className="text-black">Featured Projects</h2>
-              <p className="text-gray-600 text-lg">
-                Showcasing my development journey through real-world applications
-              </p>
-            </div>
+          {/* Projects Section */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
             
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-1 gap-6">
               {projects.map((project, index) => (
-                <Card key={index} className="hover-lift border shadow-sm">
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-black flex-1">{project.title}</h3>
-                      <div className="flex gap-2 ml-4">
-                        <a 
-                          href="#" 
-                          className="p-2 rounded bg-gray-100 hover:bg-gray-200 transition-colors"
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-4">{project.description}</p>
-                    
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-gray-100 text-gray-700">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    
-                    <p className="text-sm font-medium text-black">{project.type}</p>
+                <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <Badge key={tech} variant="secondary">{tech}</Badge>
+                    ))}
                   </div>
+                  
+                  <p className="text-sm text-primary font-medium">{project.type}</p>
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Testimonials */}
-        <Testimonials />
-
-        {/* Contact Form */}
-        <ContactForm />
+        </div>
       </div>
 
       <Footer />
