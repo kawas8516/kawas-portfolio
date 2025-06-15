@@ -1,6 +1,5 @@
 
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const location = useLocation();
@@ -38,9 +37,6 @@ const Navigation = () => {
             >
               Contact
             </Link>
-            <Button asChild size="sm" className="hover:scale-105 transition-all duration-300">
-              <a href="mailto:kaustubhamandhane24@gmail.com">Quick Email</a>
-            </Button>
           </div>
         </div>
       </div>
