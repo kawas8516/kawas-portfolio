@@ -29,11 +29,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="glass-effect border-t border-border/50">
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4 text-muted-foreground" />
+            <Mail className="w-4 h-4 text-primary" />
             <a 
               href="mailto:kaustubhamandhane24@gmail.com"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -49,7 +49,7 @@ const Footer = () => {
                 variant="ghost"
                 size="sm"
                 asChild
-                className="hover:bg-primary/10"
+                className="hover:bg-primary/10 hover:text-primary rounded-xl transition-all"
               >
                 <a
                   href={link.href}

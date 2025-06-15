@@ -6,10 +6,10 @@ const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 w-full z-50 glass-effect border-b border-border/50">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold tracking-tight">
+          <Link to="/" className="text-xl font-bold tracking-tight text-gradient">
             Portfolio
           </Link>
           
@@ -30,7 +30,7 @@ const Navigation = () => {
             >
               About
             </Link>
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="rounded-xl hover-lift">
               <a href="mailto:kaustubhamandhane24@gmail.com">Contact</a>
             </Button>
           </div>

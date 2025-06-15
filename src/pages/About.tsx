@@ -34,7 +34,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Navigation />
       
       <div className="pt-24 pb-12">
@@ -43,18 +43,18 @@ const About = () => {
           {/* About Me Section */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
-              <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gradient">About Me</h1>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-indigo-600 mx-auto rounded-full"></div>
             </div>
             
-            <Card className="p-8 md:p-12">
+            <div className="glass-effect p-8 md:p-12 rounded-3xl hover-lift">
               <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-primary to-primary/60 rounded-full flex-shrink-0 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-primary-foreground">KA</span>
+                <div className="w-48 h-48 bg-gradient-to-br from-primary via-blue-500 to-indigo-600 rounded-full flex-shrink-0 flex items-center justify-center shadow-xl">
+                  <span className="text-4xl font-bold text-white">KA</span>
                 </div>
                 
                 <div className="flex-1 text-center md:text-left">
-                  <h2 className="text-2xl font-semibold mb-6">Welcome to my little corner of the web!</h2>
+                  <h2 className="text-2xl font-semibold mb-6 text-primary">Welcome to my little corner of the web!</h2>
                   
                   <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                     My passion for technology began in high school, where I crafted Ethernet cables with RJ-45 connectors. Since then, my curiosity has grown with my height too! I love exploring cloud computing, networking, AI, operating systems, IoT, and anything else that pushes the tech boundaries.
@@ -68,62 +68,64 @@ const About = () => {
                     Outside the tech world, I'm all about meeting new people and exchanging ideas. If you're into technology, software, or just want to talk about the latest trends, I'm all ears. Drop me a line, and let's connect!
                   </p>
                   
-                  <Button size="lg" className="text-lg px-8 py-6">
+                  <Button size="lg" className="text-lg px-8 py-4 rounded-xl hover-lift">
                     <Download className="w-5 h-5 mr-2" />
                     Download CV
                   </Button>
                 </div>
               </div>
-            </Card>
+            </div>
           </section>
 
           {/* Education Section */}
           <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center text-gradient">Education</h2>
             
             <div className="space-y-6">
               {education.map((edu, index) => (
-                <Card key={index} className="p-6 hover:shadow-md transition-shadow">
+                <div key={index} className="glass-effect p-6 rounded-2xl hover-lift">
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold mb-2">{edu.degree}</h3>
-                        <p className="text-lg text-primary font-medium mb-2">{edu.institution}</p>
+                        <h3 className="text-xl font-semibold mb-2 text-primary">{edu.degree}</h3>
+                        <p className="text-lg font-medium mb-2 text-foreground">{edu.institution}</p>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
                             {edu.period}
                           </div>
                         </div>
-                        <p className="text-muted-foreground font-medium mb-3">{edu.cgpa}</p>
+                        <p className="text-muted-foreground font-medium mb-3 bg-accent/50 px-3 py-1 rounded-lg inline-block">{edu.cgpa}</p>
                       </div>
                     </div>
-                    <p className="text-muted-foreground mb-3">{edu.description}</p>
-                    <p className="text-muted-foreground">{edu.activities}</p>
+                    <p className="text-muted-foreground mb-3 leading-relaxed">{edu.description}</p>
+                    <p className="text-muted-foreground leading-relaxed">{edu.activities}</p>
                   </div>
-                </Card>
+                </div>
               ))}
             </div>
           </section>
 
           {/* Projects Section */}
           <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center text-gradient">Projects</h2>
             
             <div className="grid md:grid-cols-1 gap-6">
               {projects.map((project, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                <div key={index} className="glass-effect p-6 rounded-2xl hover-lift">
+                  <h3 className="text-xl font-semibold mb-3 text-primary">{project.title}</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">{tech}</Badge>
+                      <span key={tech} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                        {tech}
+                      </span>
                     ))}
                   </div>
                   
-                  <p className="text-sm text-primary font-medium">{project.type}</p>
-                </Card>
+                  <p className="text-sm text-primary font-medium bg-accent/50 px-3 py-1 rounded-lg inline-block">{project.type}</p>
+                </div>
               ))}
             </div>
           </section>
