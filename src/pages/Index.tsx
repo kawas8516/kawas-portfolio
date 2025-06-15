@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, Github, Linkedin, Instagram, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -65,14 +65,16 @@ const Index = () => {
         {/* Left Side - Logo/Branding */}
         <div className="w-1/2 flex items-center justify-center animate-fade-in">
           <div className="text-center">
-            <div 
-              className="border-2 border-foreground px-12 py-8 inline-block hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer select-none"
-              onClick={handlePageTurn}
-            >
-              <h1 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">
-                KAWAS | X
-              </h1>
-            </div>
+            <Link to="/about">
+              <div 
+                className="border-2 border-foreground px-12 py-8 inline-block hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer select-none"
+                onClick={handlePageTurn}
+              >
+                <h1 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">
+                  KAWAS | X
+                </h1>
+              </div>
+            </Link>
           </div>
         </div>
 
@@ -118,7 +120,7 @@ const Index = () => {
             <div className="flex gap-6 animate-fade-in">
               <a href="https://medium.com/@yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <span className="text-sm font-medium">M</span>
+                  <Mail className="w-5 h-5" />
                 </div>
               </a>
               <a href="https://pinterest.com/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
@@ -128,12 +130,22 @@ const Index = () => {
               </a>
               <a href="https://linkedin.com/in/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <span className="text-sm font-medium">in</span>
+                  <Linkedin className="w-5 h-5" />
                 </div>
               </a>
               <a href="https://instagram.com/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <span className="text-sm font-medium">IG</span>
+                  <Instagram className="w-5 h-5" />
+                </div>
+              </a>
+              <a href="https://github.com/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
+                <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
+                  <Github className="w-5 h-5" />
+                </div>
+              </a>
+              <a href="https://yourname.substack.com" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
+                <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
+                  <span className="text-sm font-medium">S</span>
                 </div>
               </a>
             </div>
