@@ -35,40 +35,40 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
-      <div className="max-w-6xl mx-auto container-padding">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-gradient mb-6">What People Say</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    <section className="section-padding bg-gray-50">
+      <div className="max-w-4xl mx-auto container-padding">
+        <div className="text-center mb-12">
+          <h2 className="text-black">What People Say</h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Feedback from professors, peers, and community members I've had the pleasure to work with.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className={`hover-lift border-0 shadow-lg animate-fade-in-delay-${Math.min(index + 1, 3)}`}
+              className="hover-lift border shadow-sm"
             >
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-1">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <h4 className="font-semibold text-black">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
                   </div>
-                  <Quote className="w-6 h-6 text-primary/30" />
+                  <Quote className="w-5 h-5 text-gray-300" />
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-4">
                   "{testimonial.content}"
                 </p>
 
                 <div className="flex items-center gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star key={i} className="w-4 h-4 fill-black text-black" />
                   ))}
                 </div>
               </CardContent>
@@ -76,8 +76,8 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12 animate-fade-in-delay-3">
-          <p className="text-muted-foreground">
+        <div className="text-center mt-8">
+          <p className="text-gray-600">
             Want to work together? Let's create something amazing!
           </p>
         </div>

@@ -25,94 +25,88 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Enhanced Navigation */}
-      <nav className="relative z-50 p-6 bg-white/80 backdrop-blur-md border-b border-border/50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <div className="min-h-screen bg-white">
+      {/* Simple Navigation */}
+      <nav className="p-6 bg-white border-b">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-8">
             <Link 
               to="/" 
-              className="text-foreground text-lg font-semibold hover:text-primary transition-colors"
+              className="text-black text-lg font-semibold hover:text-gray-600 transition-colors"
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-foreground text-lg font-medium hover:text-primary transition-colors"
+              className="text-black text-lg font-medium hover:text-gray-600 transition-colors"
             >
               About
             </Link>
           </div>
           
           <div className="relative hidden md:block">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search..."
-              className="bg-white border border-border text-foreground placeholder-muted-foreground px-10 py-3 rounded-xl w-80 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
+              className="bg-white border border-gray-200 text-black placeholder-gray-400 px-10 py-2 rounded-lg w-80 focus:outline-none focus:border-black transition-colors"
             />
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="relative z-40 min-h-screen flex">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 opacity-70"></div>
-        
-        {/* Left Side - Enhanced Branding */}
-        <div className="flex-1 flex items-center justify-center relative z-10">
-          <div className="text-center animate-fade-in">
-            <div className="relative">
-              <div className="absolute inset-0 gradient-bg blur-xl opacity-20 rounded-2xl"></div>
-              <div className="relative border-2 border-primary/20 px-12 py-8 inline-block rounded-2xl bg-white/80 backdrop-blur-sm shadow-2xl">
-                <h1 className="text-gradient text-4xl md:text-5xl font-bold tracking-wider">
-                  KAWAS | X
-                </h1>
-              </div>
+      {/* Clean Hero Section */}
+      <div className="min-h-screen flex">        
+        {/* Left Side - Simple Branding */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center fade-in">
+            <div className="border-2 border-black px-8 py-6 inline-block rounded-lg">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-wider text-black">
+                KAWAS | X
+              </h1>
             </div>
           </div>
         </div>
 
-        {/* Right Side - Enhanced Content */}
-        <div className="flex-1 flex items-center justify-center relative z-10">
-          <div className="text-center px-8 max-w-2xl animate-fade-in-delay-1">
-            <h2 className="text-6xl md:text-8xl font-light text-foreground mb-8 leading-tight">
+        {/* Right Side - Clean Content */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center px-8 max-w-2xl">
+            <h2 className="text-5xl md:text-7xl font-light text-black mb-6">
               Hi!
             </h2>
             
-            <h3 className="text-3xl md:text-5xl font-light text-foreground mb-8 leading-relaxed">
+            <h3 className="text-2xl md:text-4xl font-light text-black mb-6">
               I write code &<br />
-              <span className="text-gradient">content</span>
+              <span className="font-medium">content</span>
             </h3>
             
-            <p className="text-muted-foreground text-xl mb-12 leading-relaxed max-w-lg mx-auto">
+            <p className="text-gray-600 text-lg mb-8 max-w-lg mx-auto">
               You can know me a little better on{" "}
               <Link 
                 to="/about" 
-                className="text-primary hover:text-primary/80 underline underline-offset-4 decoration-2 transition-colors"
+                className="text-black hover:text-gray-600 underline underline-offset-4 font-medium"
               >
                 about
               </Link>{" "}
               page or just drop an email to get upcoming blogs
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button 
                 size="lg" 
-                className="gradient-bg hover:opacity-90 transition-opacity px-8 py-4 text-lg shadow-lg"
+                className="bg-black hover:bg-gray-800 text-white px-6 py-3"
                 asChild
               >
                 <Link to="/about">
                   Learn More
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="px-8 py-4 text-lg border-2 hover:bg-primary/5 transition-colors"
+                className="px-6 py-3 border-black text-black hover:bg-black hover:text-white"
                 asChild
               >
                 <a href="mailto:kaustubhamandhane24@gmail.com">
@@ -121,18 +115,18 @@ const Index = () => {
               </Button>
             </div>
             
-            {/* Enhanced Social Icons */}
-            <div className="flex justify-center gap-4">
+            {/* Simple Social Icons */}
+            <div className="flex justify-center gap-3">
               {[
-                { name: "M", href: "https://medium.com/@yourusername", color: "bg-green-500" },
-                { name: "P", href: "https://pinterest.com/yourusername", color: "bg-red-500" },
-                { name: "in", href: "https://linkedin.com/in/yourusername", color: "bg-blue-600" },
-                { name: "IG", href: "https://instagram.com/yourusername", color: "bg-pink-500" }
-              ].map((social, index) => (
+                { name: "M", href: "https://medium.com/@yourusername" },
+                { name: "P", href: "https://pinterest.com/yourusername" },
+                { name: "in", href: "https://linkedin.com/in/yourusername" },
+                { name: "IG", href: "https://instagram.com/yourusername" }
+              ].map((social) => (
                 <a 
                   key={social.name}
                   href={social.href} 
-                  className={`w-14 h-14 ${social.color} rounded-xl flex items-center justify-center text-white font-semibold hover:scale-110 transition-transform shadow-lg hover:shadow-xl`}
+                  className="w-10 h-10 bg-black text-white rounded-lg flex items-center justify-center font-medium hover:bg-gray-800 transition-colors"
                 >
                   {social.name}
                 </a>
@@ -142,42 +136,42 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Features Section */}
-      <section className="section-padding bg-white relative z-30">
-        <div className="max-w-6xl mx-auto container-padding">
-          <div className="text-center mb-16">
-            <h2 className="text-gradient mb-6">What I Do</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      {/* Simple Features Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="max-w-4xl mx-auto container-padding">
+          <div className="text-center mb-12">
+            <h2 className="text-black">What I Do</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Passionate about creating digital experiences that make a difference
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className={`text-center group hover-lift animate-fade-in-delay-${index + 1}`}
+                className="text-center p-6 bg-white rounded-lg hover-lift"
               >
-                <div className="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-semibold mb-2 text-black">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enhanced Chat Bubble */}
-      <div className="fixed bottom-8 right-8 z-50 animate-fade-in-delay-3">
+      {/* Simple Chat Button */}
+      <div className="fixed bottom-6 right-6">
         <Button
           size="icon"
-          className="gradient-bg hover:opacity-90 transition-all rounded-full w-16 h-16 shadow-2xl hover:scale-110"
+          className="bg-black hover:bg-gray-800 text-white rounded-full w-12 h-12 shadow-lg"
           asChild
         >
           <a href="mailto:kaustubhamandhane24@gmail.com">
-            <span className="text-2xl">💬</span>
+            <span className="text-lg">💬</span>
           </a>
         </Button>
       </div>
