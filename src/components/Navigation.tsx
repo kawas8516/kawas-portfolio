@@ -1,6 +1,7 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const Navigation = () => {
             >
               About
             </Link>
+            <ThemeToggle />
             <Button asChild size="sm" className="rounded-xl hover-lift">
               <a href="mailto:kaustubhamandhane24@gmail.com">Contact</a>
             </Button>

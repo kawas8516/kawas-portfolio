@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-background to-indigo-50 dark:from-slate-900 dark:via-background dark:to-indigo-950 transition-colors duration-300">
       {/* Navigation */}
       <nav className="relative z-50 p-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
