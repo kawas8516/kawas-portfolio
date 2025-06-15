@@ -61,15 +61,15 @@ const Index = () => {
       />
 
       {/* Main Content */}
-      <div className="relative z-40 min-h-screen flex flex-col lg:flex-row">
+      <div className="relative z-40 min-h-screen flex">
         {/* Left Side - Logo/Branding */}
-        <div className="flex-1 flex items-center justify-center py-12 lg:py-0 animate-fade-in">
+        <div className="w-1/2 flex items-center justify-center animate-fade-in">
           <div className="text-center">
             <div 
-              className="border-2 border-foreground px-8 py-6 inline-block hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer select-none"
+              className="border-2 border-foreground px-12 py-8 inline-block hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer select-none"
               onClick={handlePageTurn}
             >
-              <h1 className="text-foreground text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
+              <h1 className="text-foreground text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">
                 KAWAS | X
               </h1>
             </div>
@@ -77,17 +77,17 @@ const Index = () => {
         </div>
 
         {/* Right Side - Content */}
-        <div className="flex-1 flex items-center justify-center px-6 py-12 lg:py-0">
-          <div className="text-center lg:text-left px-4 md:px-8 max-w-2xl animate-fade-in">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-foreground mb-8 leading-tight animate-fade-in">
+        <div className="w-1/2 flex items-center justify-center px-8">
+          <div className="text-left max-w-2xl animate-fade-in">
+            <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-foreground mb-8 leading-tight animate-fade-in">
               Hi!
             </h2>
             
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground mb-8 leading-relaxed animate-fade-in">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-12 leading-relaxed animate-fade-in">
               I write code &<br />content
             </h3>
             
-            <p className="text-muted-foreground text-base md:text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-fade-in">
+            <p className="text-muted-foreground text-lg md:text-xl mb-12 leading-relaxed max-w-lg animate-fade-in">
               You can know me a little better on{" "}
               <Link to="/about" className="underline hover:text-foreground transition-all duration-300 hover:no-underline">
                 about
@@ -95,11 +95,11 @@ const Index = () => {
               page or just drop me a message to get in touch
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in">
+            <div className="flex gap-6 mb-16 animate-fade-in">
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="px-8 py-3 text-lg font-medium hover:bg-foreground hover:text-background transition-all duration-300 hover:scale-105"
+                className="px-8 py-4 text-lg font-medium hover:bg-foreground hover:text-background transition-all duration-300 hover:scale-105"
                 asChild
               >
                 <Link to="/about">Learn More</Link>
@@ -107,7 +107,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="px-8 py-3 text-lg font-medium bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
+                className="px-8 py-4 text-lg font-medium bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-105"
                 asChild
               >
                 <Link to="/contact">Get In Touch</Link>
@@ -115,7 +115,7 @@ const Index = () => {
             </div>
             
             {/* Social Icons */}
-            <div className="flex justify-center lg:justify-start gap-6 mt-12 animate-fade-in">
+            <div className="flex gap-6 animate-fade-in">
               <a href="https://medium.com/@yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
                   <span className="text-sm font-medium">M</span>
