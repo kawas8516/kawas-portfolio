@@ -1,16 +1,15 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-effect border-b border-border/50">
+    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold tracking-tight text-gradient">
+          <Link to="/" className="text-xl font-bold tracking-tight">
             Portfolio
           </Link>
           
@@ -31,9 +30,8 @@ const Navigation = () => {
             >
               About
             </Link>
-            <ThemeToggle />
-            <Button asChild size="sm" className="rounded-xl hover-lift">
-              <a href="mailto:kaustubhamandhane24@gmail.com">Contact</a>
+            <Button asChild size="sm">
+              <a href="mailto:your.email@example.com">Contact</a>
             </Button>
           </div>
         </div>
