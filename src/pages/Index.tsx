@@ -2,8 +2,19 @@
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Index = () => {
+  const [isPageTurning, setIsPageTurning] = useState(false);
+
+  const handlePageTurn = () => {
+    setIsPageTurning(true);
+    // Navigate to about page after animation
+    setTimeout(() => {
+      window.location.href = '/about';
+    }, 800);
+  };
+
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Navigation */}
@@ -32,12 +43,32 @@ const Index = () => {
         </div>
       </nav>
 
+      {/* Page Turn Overlay */}
+      <div 
+        className={`fixed inset-0 z-[100] pointer-events-none transition-all duration-800 ${
+          isPageTurning 
+            ? 'bg-background transform-gpu' 
+            : 'transform translate-x-full'
+        }`}
+        style={{
+          transformOrigin: 'left center',
+          transform: isPageTurning 
+            ? 'rotateY(0deg) translateX(0%)' 
+            : 'rotateY(-90deg) translateX(100%)',
+          backfaceVisibility: 'hidden',
+          perspective: '1000px'
+        }}
+      />
+
       {/* Main Content */}
       <div className="relative z-40 min-h-screen flex flex-col lg:flex-row">
         {/* Left Side - Logo/Branding */}
         <div className="flex-1 flex items-center justify-center py-12 lg:py-0 animate-fade-in">
           <div className="text-center">
-            <div className="border-2 border-foreground px-8 py-6 inline-block hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <div 
+              className="border-2 border-foreground px-8 py-6 inline-block hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer select-none"
+              onClick={handlePageTurn}
+            >
               <h1 className="text-foreground text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
                 KAWAS | X
               </h1>
