@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Search, Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Search, Github, Linkedin, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -120,32 +120,22 @@ const Index = () => {
             <div className="flex gap-6 animate-fade-in">
               <a href="https://medium.com/@yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <Mail className="w-5 h-5" />
+                  <FileText className="w-5 h-5" />
                 </div>
               </a>
-              <a href="https://pinterest.com/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
-                <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <span className="text-sm font-medium">P</span>
-                </div>
-              </a>
-              <a href="https://linkedin.com/in/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
+              <a href="https://www.linkedin.com/in/kawas-nandan/" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
                   <Linkedin className="w-5 h-5" />
                 </div>
               </a>
-              <a href="https://instagram.com/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
-                <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <Instagram className="w-5 h-5" />
-                </div>
-              </a>
-              <a href="https://github.com/yourusername" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
+              <a href="https://github.com/kawas8516" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
                   <Github className="w-5 h-5" />
                 </div>
               </a>
-              <a href="https://yourname.substack.com" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
+              <a href="https://leetcode.com/u/kawas8516/" className="text-foreground hover:text-muted-foreground transition-all duration-300 hover:scale-110">
                 <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-all duration-300">
-                  <span className="text-sm font-medium">S</span>
+                  <span className="text-sm font-medium">LC</span>
                 </div>
               </a>
             </div>

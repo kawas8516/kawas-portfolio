@@ -30,9 +30,9 @@ const Navigation = () => {
               About
             </Link>
             <Link
-              to="/projects"
+              to="/about#projects"
               className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 ${
-                location.pathname === "/projects" ? "text-primary" : "text-muted-foreground"
+                location.pathname === "/about" ? "text-primary" : "text-muted-foreground"
               }`}
             >
               Projects
