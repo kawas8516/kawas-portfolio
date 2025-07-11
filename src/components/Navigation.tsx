@@ -30,6 +30,14 @@ const Navigation = () => {
               About
             </Link>
             <Link
+              to="/projects"
+              className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 ${
+                location.pathname === "/projects" ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Projects
+            </Link>
+            <Link
               to="/contact"
               className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 ${
                 location.pathname === "/contact" ? "text-primary" : "text-muted-foreground"
