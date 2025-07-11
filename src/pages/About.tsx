@@ -30,6 +30,12 @@ const About = () => {
       description: "Developed an app for sustainable grocery shopping, providing environmental impact information and rewards for eco-friendly choices. Participated in VISA Climate Tech Hackathon 2024, developing solutions that drive sustainable outcomes and enable consumers to make informed choices.",
       technologies: ["HTML", "CSS", "JavaScript"],
       type: "UI Development"
+    },
+    {
+      title: "C++ System Utility Tool",
+      description: "Developed a comprehensive command-line system utility tool for Windows with real-time system monitoring and file management capabilities. The tool enables users to monitor CPU and memory usage, list active processes, search for files, and perform file operations including copying and deletion. Features an interactive menu system designed for beginners and leverages Windows API functions, demonstrating advanced knowledge of C++ and Windows system programming.",
+      technologies: ["C++", "Windows API", "MinGW"],
+      type: "System Programming"
     }
   ];
 
