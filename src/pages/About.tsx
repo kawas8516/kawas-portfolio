@@ -20,6 +20,14 @@ const About = () => {
 
   const projects = [
     {
+      title: "Task Scheduler",
+      description: "Built a full-stack task management system with Java Servlets, JSP, and JDBC, improving task tracking efficiency by 40% compared to manual planning. Designed a PostgreSQL database (3NF) with foreign keys and DAO patterns, ensuring data integrity and 99% query accuracy. Integrated FullCalendar.js and Bootstrap 5 to create a mobile-responsive dashboard, reducing navigation time by 30%. Deployed on Apache Tomcat with MVC architecture and session management, enabling secure, real-time multi-user scheduling.",
+      technologies: ["Java", "PostgreSQL", "Servlet", "JSP", "JDBC", "FullCalendar", "Bootstrap", "Tomcat"],
+      type: "Full-Stack Development",
+      period: "May 2025 – Jul 2025",
+      link: "https://github.com/kawas8516/Taskscheduler"
+    },
+    {
       title: "Belleza",
       description: "Developed a platform for seamless salon bookings in Pune, allowing users to schedule appointments from home. Eliminated long waiting times and last-minute cancellations through a user-friendly interface and extensive salon network.",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -36,6 +44,20 @@ const About = () => {
       description: "Developed a comprehensive command-line system utility tool for Windows with real-time system monitoring and file management capabilities. The tool enables users to monitor CPU and memory usage, list active processes, search for files, and perform file operations including copying and deletion. Features an interactive menu system designed for beginners and leverages Windows API functions, demonstrating advanced knowledge of C++ and Windows system programming.",
       technologies: ["C++", "Windows API", "MinGW"],
       type: "System Programming"
+    },
+    {
+      title: "Railway Reservation System",
+      description: "A simple Python project for railway ticket booking to learn Python basics, file handling, and console-based project workflow.",
+      technologies: ["Python"],
+      type: "Console Application",
+      link: "https://github.com/kawas8516/Railway-Reservation-System"
+    },
+    {
+      title: "Shopping Cart",
+      description: "Python-based shopping cart system to practice OOP, data handling, and basic project structuring.",
+      technologies: ["Python"],
+      type: "Console Application",
+      link: "https://github.com/kawas8516/shopping-cart"
     }
   ];
 
@@ -123,9 +145,18 @@ const About = () => {
             
             <div className="grid gap-8 lg:gap-10">
               {projects.map((project, index) => (
-                <Card key={index} className="p-8 md:p-10 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+                <Card 
+                  key={index} 
+                  className="p-8 md:p-10 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                  onClick={() => project.link && window.open(project.link, '_blank')}
+                >
                   <div className="space-y-6">
-                    <h3 className="text-xl lg:text-2xl font-semibold text-foreground">{project.title}</h3>
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-xl lg:text-2xl font-semibold text-foreground">{project.title}</h3>
+                      {project.period && (
+                        <span className="text-sm text-muted-foreground whitespace-nowrap">{project.period}</span>
+                      )}
+                    </div>
                     <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">{project.description}</p>
                     
                     <div className="flex flex-wrap gap-3">
