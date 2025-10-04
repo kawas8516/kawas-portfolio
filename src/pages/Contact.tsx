@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
@@ -24,8 +24,7 @@ const Contact = () => {
             </p>
           </section>
 
-          <div className="grid lg:grid-cols-2 gap-16">
-            
+          <div className="max-w-2xl mx-auto">
             {/* Get in Touch */}
             <Card className="p-8 md:p-10 hover:shadow-lg transition-all duration-300 animate-fade-in">
               <h2 className="text-2xl lg:text-3xl font-semibold mb-8 text-foreground">Get In Touch</h2>
@@ -46,54 +45,6 @@ const Contact = () => {
                 </Button>
               </div>
             </Card>
-
-            {/* Contact Information */}
-            <div className="space-y-8 animate-fade-in">
-              <Card className="p-8 md:p-10 hover:shadow-lg transition-all duration-300">
-                <h2 className="text-2xl lg:text-3xl font-semibold mb-8 text-foreground">Contact Information</h2>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                      <p className="text-muted-foreground">kaustubhamandhane24@gmail.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                      <p className="text-muted-foreground">Available upon request</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                      <p className="text-muted-foreground">Pune, Maharashtra, India</p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Response Time */}
-              <Card className="p-8 md:p-10 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">Quick Response</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  I typically respond to messages within 24 hours. For urgent inquiries, 
-                  feel free to mention it in your message subject line.
-                </p>
-              </Card>
-            </div>
           </div>
 
           {/* Testimonials Section */}
